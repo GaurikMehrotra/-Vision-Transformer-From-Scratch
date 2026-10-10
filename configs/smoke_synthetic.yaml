@@ -1,0 +1,16 @@
+extends: debug_cpu.yaml
+output_dir: runs/smoke_synthetic
+data:
+  dataset: synthetic
+  synthetic_train_size: 64
+  synthetic_test_size: 20
+  validation_size: 16
+  train_subset: null
+  validation_subset: null
+model:
+  embed_dim: 32
+  depth: 2
+  dropout: 0.1
+  drop_path_rate: 0.1
+training:
+  batch_size: 16

@@ -1,0 +1,17 @@
+extends: vit_tiny_cifar10.yaml
+output_dir: runs/debug_cpu
+model:
+  embed_dim: 64
+  depth: 2
+  num_heads: 4
+  drop_path_rate: 0.0
+training:
+  epochs: 2
+  batch_size: 32
+  num_workers: 0
+  device: cpu
+  amp: false
+  warmup_epochs: 0
+data:
+  train_subset: 500
+  validation_subset: 200

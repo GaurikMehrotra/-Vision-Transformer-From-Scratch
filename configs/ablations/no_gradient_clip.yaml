@@ -1,0 +1,4 @@
+extends: ../vit_tiny_cifar10.yaml
+output_dir: runs/ablations/no_gradient_clip/seed42
+training:
+  gradient_clip: 1000000.0

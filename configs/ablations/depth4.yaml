@@ -1,0 +1,4 @@
+extends: ../vit_tiny_cifar10.yaml
+output_dir: runs/ablations/depth4/seed42
+model:
+  depth: 4

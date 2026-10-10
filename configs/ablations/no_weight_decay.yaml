@@ -1,0 +1,4 @@
+extends: ../vit_tiny_cifar10.yaml
+output_dir: runs/ablations/no_weight_decay/seed42
+training:
+  weight_decay: 0.0

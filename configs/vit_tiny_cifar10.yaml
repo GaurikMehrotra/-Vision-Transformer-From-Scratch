@@ -1,0 +1,53 @@
+seed: 42
+output_dir: runs/vit_tiny_cifar10/seed42
+data:
+  dataset: cifar10
+  root: data
+  download: true
+  image_size: 32
+  split_seed: 2026
+  validation_size: 5000
+  train_subset: null
+  validation_subset: null
+model:
+  name: vit
+  image_size: 32
+  patch_size: 4
+  in_channels: 3
+  num_classes: 10
+  embed_dim: 128
+  depth: 6
+  num_heads: 4
+  mlp_ratio: 4.0
+  dropout: 0.0
+  attn_dropout: 0.0
+  drop_path_rate: 0.1
+  positional_encoding: learned
+  pooling: cls
+  patch_method: conv
+  norm_eps: 0.000001
+training:
+  epochs: 100
+  batch_size: 128
+  num_workers: 2
+  cpu_threads: 2
+  device: auto
+  amp: true
+  deterministic: true
+  lr: 0.0005
+  min_lr: 0.000001
+  warmup_epochs: 10
+  weight_decay: 0.05
+  label_smoothing: 0.1
+  gradient_clip: 1.0
+augmentation:
+  random_crop: true
+  crop_padding: 4
+  horizontal_flip: true
+  randaugment: true
+  randaugment_ops: 2
+  randaugment_magnitude: 9
+  mixup_alpha: 0.2
+  cutmix_alpha: 1.0
+  mix_probability: 1.0
+  mixup_choice_probability: 0.5

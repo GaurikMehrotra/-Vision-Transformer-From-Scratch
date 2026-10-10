@@ -1,0 +1,4 @@
+extends: ../vit_tiny_cifar10.yaml
+output_dir: runs/ablations/no_cutmix/seed42
+augmentation:
+  cutmix_alpha: 0.0

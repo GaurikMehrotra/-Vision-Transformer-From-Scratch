@@ -1,0 +1,22 @@
+name: CPU correctness
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: CPU dependencies
+        run: |
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.6.0 torchvision==0.21.0
+          python -m pip install -r requirements.txt
+          python -m pip install -e . --no-deps --no-build-isolation
+      - name: Lint and format
+        run: make lint
+      - name: Fast correctness (no data downloads)
+        run: make test-fast

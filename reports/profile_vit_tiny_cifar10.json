@@ -1,0 +1,26 @@
+{
+  "ours": {
+    "parameters": 1205898,
+    "counted_flops": 84102016,
+    "unsupported_operators": {
+      "aten::add": 13,
+      "aten::mul": 6,
+      "aten::softmax": 6,
+      "aten::gelu": 6
+    },
+    "convention": "one multiply-add = one FLOP; omitted operators listed explicitly"
+  },
+  "timm": {
+    "parameters": 1205898,
+    "counted_flops": 84102016,
+    "unsupported_operators": {
+      "aten::add": 13,
+      "aten::mul": 6,
+      "aten::softmax": 6,
+      "aten::gelu": 6
+    },
+    "convention": "one multiply-add = one FLOP; omitted operators listed explicitly"
+  },
+  "parameters_match": true,
+  "counted_flops_match": true
+}

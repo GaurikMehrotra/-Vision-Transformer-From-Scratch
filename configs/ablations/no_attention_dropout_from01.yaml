@@ -1,0 +1,4 @@
+extends: attention_dropout01.yaml
+output_dir: runs/ablations/no_attention_dropout_from01/seed42
+model:
+  attn_dropout: 0.0

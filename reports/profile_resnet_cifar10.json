@@ -1,0 +1,11 @@
+{
+  "ours": {
+    "parameters": 272474,
+    "counted_flops": 41214592,
+    "unsupported_operators": {
+      "aten::add": 9,
+      "aten::mean": 1
+    },
+    "convention": "one multiply-add = one FLOP; omitted operators listed explicitly"
+  }
+}

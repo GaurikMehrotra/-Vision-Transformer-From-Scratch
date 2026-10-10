@@ -1,0 +1,6 @@
+extends: vit_tiny_cifar10.yaml
+output_dir: runs/vit_tiny_cifar100/seed42
+data:
+  dataset: cifar100
+model:
+  num_classes: 100

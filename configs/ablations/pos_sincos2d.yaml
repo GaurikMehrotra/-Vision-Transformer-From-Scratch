@@ -1,0 +1,4 @@
+extends: ../vit_tiny_cifar10.yaml
+output_dir: runs/ablations/pos_sincos2d/seed42
+model:
+  positional_encoding: sincos2d

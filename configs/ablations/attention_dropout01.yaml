@@ -1,0 +1,4 @@
+extends: ../vit_tiny_cifar10.yaml
+output_dir: runs/ablations/attention_dropout01/seed42
+model:
+  attn_dropout: 0.1

@@ -1,0 +1,6 @@
+extends: vit_tiny_cifar10.yaml
+output_dir: runs/resnet_cifar10/seed42
+model:
+  name: resnet
+  width: 16
+  blocks_per_stage: 3
