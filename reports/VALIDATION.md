@@ -8,7 +8,7 @@ CUDA is unavailable. This is development validation, not benchmark training.
 |---|---|
 | Full pytest | 55 passed |
 | Fast CPU CI subset | 51 passed, 4 deselected |
-| Ruff lint and format | Passed; 29 Python files formatted |
+| Ruff lint and format | Passed; 33 Python files formatted |
 | Dependency consistency | `pip check` passed |
 | Conv vs unfold | Output, input gradient and weight gradient match |
 | Explicit attention vs PyTorch MHA | Output, head weights and input gradients match |
